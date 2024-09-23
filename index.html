@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat App</title>
+</head>
+<body>
+    <div>
+        <h2>Chat</h2>
+        <div id="chat-window"></div>
+        <input type="text" id="message-input" placeholder="Type a message">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        // Placeholder functions, needs to be connected to a backend or API
+        function sendMessage() {
+            const message = document.getElementById('message-input').value;
+            document.getElementById('chat-window').innerHTML += `<p>${message}</p>`;
+            document.getElementById('message-input').value = '';
+        }
+    </script>
+</body>
+</html>
